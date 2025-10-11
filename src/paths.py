@@ -25,7 +25,7 @@ def initialize_project_structure():
     """
     for path_name, path in ProjectPaths.get_all_paths().items():
         if not path.exists():
-            print("Initializing project structure...")
+            print("Establishing project structure...")
             path.mkdir(parents=True, exist_ok=True)
             print(f"Created: {path_name} → {path}")
 
