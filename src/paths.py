@@ -7,8 +7,14 @@ class ProjectPaths:
     All paths are resolved relative to the project root.
     """
     PROJECT_PATH = Path(__file__).resolve().parents[1]
+
     DATA_FOLDER = PROJECT_PATH / "data"
-    RAW_DATA_FOLDER = DATA_FOLDER / "raw"
+    DATA_RAW_FOLDER = DATA_FOLDER / "raw"
+
+    REPORTS_FOLDER = PROJECT_PATH / "reports"
+    REPORTS_FIGURES_FOLDER = REPORTS_FOLDER / "figures"
+
+    NOTEBOOKS_FOLDER = PROJECT_PATH / "notebooks"
 
     @classmethod
     def get_all_paths(cls):
@@ -19,7 +25,7 @@ class ProjectPaths:
         }
 
 
-def initialize_project_structure():
+def establish_project_structure():
     """
     Creates all necessary directories defined in ProjectPaths.
     """
@@ -30,4 +36,4 @@ def initialize_project_structure():
             print(f"Created: {path_name} → {path}")
 
 
-initialize_project_structure()
+establish_project_structure()

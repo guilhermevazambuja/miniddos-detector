@@ -4,7 +4,7 @@ from zipfile import ZipFile
 from .paths import ProjectPaths
 
 URL = "http://cicresearch.ca/CICDataset/CIC-IDS-2017/Dataset/CIC-IDS-2017/CSVs/"
-DEST = ProjectPaths.RAW_DATA_FOLDER
+DEST = ProjectPaths.DATA_RAW_FOLDER
 
 
 def download_dataset():
