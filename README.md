@@ -4,6 +4,17 @@ A lightweight pipeline for detecting Distributed Denial of Service (DDoS) attack
 techniques. This project leverages the CICIDS2017 dataset to explore features and
 visualize network flow patterns through Singular Value Decomposition (SVD).
 
+This project is a study inspired by:
+
+**A Detailed Analysis of the CICIDS2017 Data Set**  
+Iman Sharafaldin, Arash Habibi Lashkari, and Ali A. Ghorbani
+
+The paper evaluates the CICIDS2017 dataset and introduces the concept of "superfeatures"—high-quality derived features
+obtained through dimensionality reduction techniques. It demonstrates that models like Random Forest can achieve
+improved performance when trained on these superfeatures. This project builds directly on those ideas by applying
+SVD to extract behavioral components from network flow data. These components serve as
+superfeatures for training a classifier to detect DDoS attacks with improved efficiency, accuracy and interpretability.
+
 ## About the Dataset: CICIDS2017
 
 The [CICIDS2017](https://www.unb.ca/cic/datasets/ids-2017.html) dataset was created to address the limitations of older
