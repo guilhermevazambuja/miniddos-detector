@@ -11,8 +11,11 @@ class ProjectPaths:
     DATA_FOLDER = PROJECT_PATH / "data"
     DATA_RAW_FOLDER = DATA_FOLDER / "raw"
 
+    DATA_ML_CSV_FOLDER = DATA_RAW_FOLDER / "MachineLearningCSV" / "MachineLearningCVE"
+
     REPORTS_FOLDER = PROJECT_PATH / "reports"
     REPORTS_FIGURES_FOLDER = REPORTS_FOLDER / "figures"
+    REPORTS_TABLES_FOLDER = REPORTS_FOLDER / "tables"
 
     NOTEBOOKS_FOLDER = PROJECT_PATH / "notebooks"
 
