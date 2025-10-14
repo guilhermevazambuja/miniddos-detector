@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from pathlib import Path
 from zipfile import ZipFile
 from .paths import ProjectPaths
 
@@ -41,12 +42,24 @@ def unzip_raw_files():
     """
     for zip_path in DEST.glob('*.zip'):
         unzipped_path = zip_path.parent / zip_path.stem
-        if unzipped_path.exists():
+        if unzipped_path.exists() and not is_empty(unzipped_path):
             continue
-
+            
         print(f"Unzipping {zip_path.name}...")
         try:
             with ZipFile(zip_path, 'r') as zip_ref:
                 zip_ref.extractall(unzipped_path)
         except Exception as e:
             print(f"Failed to unzip {zip_path.name}: {e}")
+
+
+def is_empty(path: Path) -> bool:
+    """
+    Returns True if the folder is empty or only contains empty subfolders.
+    """
+    if not path.exists():
+        return True
+    for item in path.rglob('*'):
+        if item.is_file():
+            return False
+    return True
