@@ -106,8 +106,12 @@ interactively.
 
 ## Images
 
-![Image 1](imgs/1.png)  
-![Image 2](imgs/2.png)  
-![Image 3](imgs/3.png)  
-![Image 4](imgs/4.png)  
-![Image 5](imgs/5.png)
+<div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+
+  <img src="imgs/1.png" alt="Image 1" width="600" />
+  <img src="imgs/2.png" alt="Image 2" width="600" />
+  <img src="imgs/3.png" alt="Image 3" width="600" />
+  <img src="imgs/4.png" alt="Image 4" width="600" />
+  <img src="imgs/5.png" alt="Image 5" width="600" />
+
+</div>
